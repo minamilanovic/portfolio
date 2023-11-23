@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <title>Mina - portfolio</title>
+  <title>Mina - Portfolio</title>
   <style>
     body {
       font-family: 'Arial', sans-serif;
@@ -23,48 +23,67 @@
     .navbar-dark .navbar-toggler-icon {
       background-color: #adb5bd;
     }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 1rem 0;
+    }
 
+    nav ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav li {
+      margin: 0 1rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+     transition: color 0.3s ease;
+    }
+
+    nav-link:hover {
+      color: #ff5733;
+      transition: all 2s ease;
+    }
     .jumbotron {
       background-color: #343a40;
       color: #fff;
       padding: 2rem;
       margin-bottom: 0;
     }
-
     .section {
       padding: 60px 0;
     }
-
     h2 {
       color: #007bff;
     }
     .profile-picture {
-    max-width: 200px;
-    border-radius: 50%;
-    transition: all 0.1s ease;
-}
-
-.profile-picture:hover {
-    border: 5px solid #ff5733;
-    transition: all 0.1s ease;
-}
-.project:hover, #about:hover {
+      max-width: 200px;
+      border-radius: 50%;
+      transition: all 0.1s ease;
+    }
+    .profile-picture:hover {
+      border: 5px solid #ff5733;
+      transition: all 0.1s ease;
+    }
+    #about:hover {
     transform: scale(1.05);
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 1);
     background: linear-gradient(#ff583371, #33e7ff80);
     transition: all 0.3s ease, opacity 0.5s ease;
-    
 }
 .contact-form {
     max-width: 600px;
     margin: 0 auto;
 }
-
 label, input, textarea {
     display: block;
     margin-bottom: 1rem;
 }
-
 input[type="text"],
 input[type="email"],
 textarea {
@@ -73,52 +92,43 @@ textarea {
     border: 1px solid #ddd;
     transition: border-color 0.3s ease; /* Border color change on focus */
 }
-
 input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
     border-color: #ff5733;
 }
-
 input[type="submit"] {
     background-color: #333;
     color: #fff;
     padding: 0.5rem 1rem;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Background color change on hover */
+    transition: background-color 0.3s ease; 
 }
-
 input[type="submit"]:hover {
     background-color: #ff5733;
 }
-
     footer {
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 1rem 0;
 }
-
 footer ul {
     list-style-type: none;
 }
-
 footer li {
     display: inline;
     margin: 0 1rem;
 }
-
 footer a {
     text-decoration: none;
     color: #fff;
-    transition: color 0.3s ease; /* Color change on hover */
+    transition: color 0.3s ease; 
 }
-
 footer a:hover {
     color: #ff5733;
 }
-
   </style>
 </head>
 <body>
@@ -126,7 +136,7 @@ footer a:hover {
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
-      <a class="navbar-brand" href="#">Mina Milanovic</a>
+      <a class="navbar-brand" href="#">Mina Milanović</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -148,26 +158,20 @@ footer a:hover {
       </div>
     </div>
   </nav>
-
-  <!-- Jumbotron/Intro -->
   <div class="jumbotron text-center">
     <h1 class="display-4">Dobrodošli na moj Portfolio!</h1>
     <img class="profile-picture" src="image1.jpg" alt="ja">
-    <p class="lead">Moje ime je Mina Milanović, trenutno sam učenik Prve kragujevačke gimnazije i idem u 4. razred.
-      Osnovnu školu sam pohadjala u Batočini, gde sam bila odličan djak. Zanimaju me baze podataka i programiranje.
+    <p id="about" class="lead">Moje ime je Mina Milanović, trenutno sam učenik Prve kragujevačke gimnazije i idem u 4. razred.
+      Osnovnu školu sam pohađala u Batočini, gde sam bila odličan djak. Zanimaju me baze podataka i programiranje.
       Planiram da upišem Fakultet inženjerskih nauka u Kragujevcu, smer : softversko inženjerstvo.
     </p>
   </div>
-
-  <!-- Interesovanja -->
   <section id="interesovanja" class="section">
     <div class="container">
       <h2 class="text-center">Interesovanja</h2>
-      <p>Baze podataka (My SQL), programiranje u C++-u, C#-u, Java Script-u...</p>
+      <p>Baze podataka(My SQL), programiranje u C++-u, C#-u, Java Script-u...</p>
     </div>
   </section>
-
-  <!-- Postignuća -->
   <section id="postignuca" class="section">
     <div class="container">
       <h2 class="text-center">Postignuća</h2>
@@ -177,15 +181,12 @@ footer a:hover {
       </p>
     </div>
   </section>
-
-  <!-- Aspiracije -->
   <section id="inspiracija" class="section">
     <div class="container">
       <h2 class="text-center">Inspiracija</h2>
       <p>Upis željenog fakulteta, posao kasnije...</p>
     </div>
   </section>
-
   <section id="kontakt">
     <h2>Kontaktiraj me!</h2>
     <div class="contact-form">
@@ -199,7 +200,6 @@ footer a:hover {
         <input type="submit" value="Submit" />
       </form>
     </div>
-
     <footer>
       <p>&copy; 2023 Moj Portfolio</p>
       <ul>
@@ -207,8 +207,6 @@ footer a:hover {
         <li><a href="#">Privacy Policy</a></li>
       </ul>
     </footer>
-
-  <!-- Bootstrap JS i Popper.js -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
