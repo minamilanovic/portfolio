@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/76a0451c5c.js" crossorigin="anonymous"></script>
+  <title>Mina - Portfolio</title>
+  <style>
+    *{
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      transition: all 0.3s ease;
+    }
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f8f9fa;
+      color: #495057;
+    }
+    .navbar {
+      background-color: #343a40;
+    }
+    .navbar-dark .navbar-nav .nav-link {
+      color: #adb5bd;
+    }
+    .navbar-dark .navbar-toggler-icon {
+      background-color: #adb5bd;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 1rem 0;
+    }
+    nav ul {
+      display: flex;
+      justify-content: center;
+    }
+    nav li {
+      margin: 0 1rem;
+    }
+    nav a {
+      text-decoration: none;
+      color: #fff;
+     transition: color 0.3s ease;
+    }
+    nav-link:hover {
+      color: #ff5733;
+      transition: all 2s ease;
+    }
+    .jumbotron {
+      background-color: #343a40;
+      color: #fff;
+      padding: 2rem;
+      margin-bottom: 0;
+    }
+    .section {
+      padding: 60px 0;
+    }
+    h2 {
+      color: #007bff;
+    }
+    .profile-picture {
+      max-width: 200px;
+      border-radius: 50%;
+    }
+    .profile-picture:hover {
+      border: 5px solid #ff5733;
+      transition: all 0.2s ease;
+    }
+    .img-hover:hover{
+      transform: scale(1.1);
+    }
+    .card{
+      background-color: #343a40;
+      color: white;
+    }
+    .card:hover{
+      transform: scale(1.05);
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      background-color: #343a40;
+    }
+    #about:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 1);
+    background: linear-gradient(#ff583371, #33e7ff80);
+    transition: all 0.3s ease, opacity 0.5s ease;
+    }
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    label, input, textarea {
+      display: block;
+      margin-bottom: 1rem;
+    }
+    input[type="text"], input[type="email"], textarea {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #ddd;
+      transition: border-color 0.3s ease;
+    }
+    input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+      border-color: #ff5733;
+    }
+    input[type="submit"] {
+      background-color: #333;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease; 
+  }
+  input[type="submit"]:hover {
+    background-color: #ff5733;
+  }
+    footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  footer ul {
+    list-style-type: none;
+  }
+  footer li {
+  display: inline;
+  margin: 0 1rem;
+  }
+  footer a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease; 
+  }
+  footer a:hover {
+    color: #ff5733;
+  }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top justify-content-center nav-underline">
+    <button class="navbar-toggler" type="button" style="background-color:#474b76;"  data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+    <div class="container">
+      <a class="navbar-brand" href="#">Mina Milanović</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#interesovanja">Interesovanja</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#postignuca">Postignuća</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#aspiracija">Aspiracije</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#kontakt">Kontakt</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="jumbotron text-center">
+    <h1 class="display-4">Dobrodošli na moj Portfolio!</h1>
+    <img class="profile-picture" src="image1.jpg">
+    <p id="about" class="lead">Moje ime je Mina Milanović, trenutno sam učenik Prve kragujevačke gimnazije i idem u 4. razred.
+      Osnovnu školu sam pohađala u Batočini, gde sam bila odličan djak. Zanimaju me baze podataka i programiranje.
+      Planiram da upišem Fakultet inženjerskih nauka u Kragujevcu, smer : softversko inženjerstvo.
+    </p>
+  </div>
+  <section id="interesovanja" class="section">
+    <div class="container">
+      <h2 class="text-center">Interesovanja</h2>
+      <div class="col">
+        <h4>Programski jezici</h4>
+          <div class="container">
+            <div class="row mx-auto">
+              <div class="col p-3">
+                <img src="python.png" width="100" height="100" class="img-hover">
+                  <p>Python</p>
+                    <img src="c++.png" width="100" height="100" class="img-hover">
+                                <p>C++</p>
+                            </div>
+                            <div class="col p-3">
+                                <img src="cs.png" width="90" height="100" class="img-hover">
+                                <p>C#</p>
+                                <img src="html.png" width="100" height="100" class="img-hover">
+                                <p>HTML</p>
+                            </div>
+                            <div class="col p-3">
+                                <img src="css.png" width="100" height="100" class="img-hover">
+                                <p>CSS</p>
+                                <img src="sql.png" width="90" height="100" class="img-hover">
+                                <p>SQL</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+  </section>
+  <section id="postignuca" class="section">
+    <div class="container">
+      <h2 class="text-center">Postignuća</h2>
+      <div class="row text-center gap-4 m-3">
+        <div class="card col-lg-3 col-md-6 col-sm-7 m-3 mx-auto">
+            <img src="takmicenje.png" class="card-img-top img-fluid" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Učešće na takmičenjima</h5>
+              <p class="card-text">U osnovnoj sam učestvovala na raznim takmičenjima iz srpskog jezika, istorije, biologije,matematike...</p>
+            </div>
+          </div>
+          <div class="card col-lg-3 col-md-6 col-sm-7 m-3 mx-auto">
+            <img src="lokaliteti.png" class="card-img-top img-fluid" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Baza podataka za lokalitete i antikvitete</h5>
+              <p class="card-text">U četvrtoj godini srednje škole sam kao projekat iz baza podataka napravila bazu koja čuva podatke o lokalitetima Srbije i pronađenim antikvitetima.</p>
+            </div>
+          </div>
+          <div class="card col-lg-3 col-md-6 col-sm-7 m-3 mx-auto">
+            <img src="iks-oks.png" class="card-img-top img-fluid" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Igra 'Iks-oks'</h5>
+              <p class="card-text">U prvoj godini srednje sam kao projekat iz Programiranja napravila igricu 'Iks-oks' u Pythonu.</p>
+            </div>
+          </div>
+    </div>
+    </div>
+  </section>
+  <section id="aspiracija" class="section">
+    <div class="container">
+      <h2 class="text-center">Aspiracije</h2>
+      <div class="d-flex flex-column mb-6 p-1 gap-2 pt-3">
+        <img class="mx-auto" src="biznis.png" alt="firm" style="max-width:500px">
+        <p class="text-center pt-3 fs-3">Zelela bih da jednog dana osnujem veliku i uspesnu IT firmu.</p>
+      </div>
+    </div>
+  </section>
+  <section id="kontakt" style="text-align: center;">
+    <h2>Kontaktiraj me!</h2>
+    <div class="contact-form">
+      <form action="submit_form.php" method="post">
+        <label for="name">Ime</label>
+        <input type="text" id="name" name="name" required />
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" required />
+        <label for="message">Poruka za mene</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+    <footer>
+      <div>
+        <a href="#"><i class="fa-brands fa-square-instagram fa-lg p-2"></i></a>
+        <a href="#"><i class="fa-brands fa-github fa-lg p-2"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook fa-lg p-2"></i></a>
+        <a href="#"><i class="fa-brands fa-square-snapchat fa-lg p-2"></i></a>
+        <a href="#"><i class="fa-brands fa-tiktok fa-lg p-2"></i></a>
+    </div>
+      <p>&copy; 2023 Moj Portfolio</p>
+      <ul>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
