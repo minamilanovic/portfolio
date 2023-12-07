@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista za kupovinu</title>
+  <style>
+    .item-card {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="shopping-list"></div>
+
+<script>
+  var shoppingItems = [
+    { "naziv": "Hleb", "komada": 2 },
+    { "naziv": "Mleko", "komada": 2 },
+    { "naziv": "Jaja", "komada": 10 },
+    { "naziv": "Sveska", "komada": 2 },
+    { "naziv": "Sapun za ruke", "komada": 1 },
+    { "naziv": "Šampon", "komada": 1 },
+    { "naziv": "Toalet papir", "komada": 1 },
+  ];
+  function renderKupovina() {
+    var shoppingListDiv = document.getElementById("shopping-list");
+    shoppingListDiv.innerHTML = ""; 
+    shoppingItems.forEach(function(item) {
+      var cardDiv = document.createElement("div");
+      cardDiv.className = "item-card";
+      var title = document.createElement("h3");
+      title.textContent = item.naziv + " - Komada: " + item.komada;
+      cardDiv.appendChild(title);
+      var button = document.createElement("button");
+      button.textContent = "Umanji komad";
+      button.onclick = function() {
+        item.komada -= 1;
+        title.textContent = item.naziv + " - Komada: " + item.komada;
+        if (item.komada === 0) {
+          cardDiv.style.display = "none";
+        }
+      };
+      cardDiv.appendChild(button);
+      shoppingListDiv.appendChild(cardDiv);
+    });
+  }
+  renderKupovina();
+</script>
+</body>
+</html>
