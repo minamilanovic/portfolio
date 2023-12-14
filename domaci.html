@@ -27,15 +27,15 @@
     { "naziv": "Toalet papir", "komada": 1 },
   ];
   function renderKupovina() {
-    var shoppingListDiv = document.getElementById("shopping-list");
+    shoppingListDiv = document.getElementById("shopping-list");
     shoppingListDiv.innerHTML = ""; 
     shoppingItems.forEach(function(item) {
-      var cardDiv = document.createElement("div");
+      cardDiv = document.createElement("div");
       cardDiv.className = "item-card";
-      var title = document.createElement("h3");
+      title = document.createElement("h3");
       title.textContent = item.naziv + " - Komada: " + item.komada;
       cardDiv.appendChild(title);
-      var button = document.createElement("button");
+      button = document.createElement("button");
       button.textContent = "Umanji komad";
       button.onclick = function() {
         item.komada -= 1;
